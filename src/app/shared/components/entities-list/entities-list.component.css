@@ -1,0 +1,18 @@
+.mvl-subtitle {
+  text-align: center;
+}
+
+/* .mvl-search-container {
+  padding: 10px;
+  text-align: center;
+} */
+
+.mvl-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mvl-cards-list__item {
+  flex: 0 0 200px;
+}

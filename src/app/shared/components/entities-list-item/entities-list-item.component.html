@@ -1,0 +1,8 @@
+<a [routerLink]="entity.id" class="md-card">  
+  <mvl-thumbnail
+    *ngIf="entity.thumbnail"
+    [image]="entity.thumbnail"
+    alt="Thumbnail of {{entity.name}}"
+  ></mvl-thumbnail>
+  <h5>{{entity.name || entity.fullName || entity.title}}</h5>
+</a>

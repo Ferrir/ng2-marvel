@@ -1,0 +1,20 @@
+<h2 class="mvl-subtitle">{{title}}</h2>
+
+<div *ngIf="isLoading">
+    Loading...
+</div>
+
+<div *ngIf="entities && !isLoading" class="mvl-cards-list">
+    <mvl-entities-list-item
+        *ngFor="let entity of entities.data.results"
+        [entity]="entity"
+        class="mvl-cards-list__item"
+    ></mvl-entities-list-item>
+</div>
+
+<mvl-pagination
+    *ngIf="getTotalPages()"
+    [currentPage]="page"
+    [totalPages]="getTotalPages()"
+    (change)="onChangePage($event)"
+></mvl-pagination>
